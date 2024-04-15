@@ -1,7 +1,13 @@
 {% extends 'base.html' %}
 
 {% block content %}
-<h1>Hello {{name}}</h1>
+<h1>Hello World!</h1>
+
+<div>
+    <div>Name: {{dest1.name}}</div>
+    <div>Description: {{dest1.desc}}</div>
+    <div>Price: ₹{{dest1.price}}</div>
+</div>
 
 <form action="add" method="post">
     {% csrf_token %}
