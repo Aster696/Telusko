@@ -1,3 +1,4 @@
+{% load static %}
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -7,8 +8,9 @@
     <title>Project</title>
 </head>
 <body bgcolor="cyan">
+    <img src="{% static 'images/tank.jpg'%}" alt="" width="100%">
     {% block content %}
-        
+
     {% endblock %}
 </body>
 </html>
