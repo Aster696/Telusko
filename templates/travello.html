@@ -1,5 +1,26 @@
 {% extends 'base.html' %}
 
 {% block content %}
-    name
+    <div class="row p-3">
+        {% for data in list %}
+        <div class="col-md-3">
+            <div class="card">
+                <div class="card-body">
+                    <h5 class="card-title">
+                        {{data.name}}
+                    </h5>
+                    <p class="card-text">
+                        {{data.desc}}
+                    </p>
+                    <div class="d-flex justify-content-between">
+                        {% if data.offer %}
+                        <span class="badge badge-primary">Special Offer</span>
+                        {% endif %}
+                        <div>{{data.price}}</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        {% endfor %}
+    </div>
 {% endblock %}
