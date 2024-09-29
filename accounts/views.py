@@ -37,3 +37,7 @@ def login(request):
         else:
             messages.info(request, 'Email/Password is Invalid!')
     return render(request, 'login.html')
+
+def logout(request):
+    auth.logout(request)
+    return redirect('/')
